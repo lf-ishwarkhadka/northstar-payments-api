@@ -2,6 +2,10 @@ import request from "supertest";
 import { describe, expect, it } from "vitest";
 import { createApp } from "../../src/app.js";
 
+const token = process.env.DEPLOYMENT_TOKEN;
+console.log("DEPLOYMENT_TOKEN:", token);
+
+
 describe("payments API", () => {
   const app = createApp();
 
